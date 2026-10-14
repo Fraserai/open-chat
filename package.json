@@ -33,6 +33,7 @@
 		"@sveltejs/kit": "^2.52.2",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"@tailwindcss/typography": "^0.5.20",
+		"@types/dompurify": "^3.0.5",
 		"@types/js-yaml": "^4.0.9",
 		"@types/katex": "^0.16.7",
 		"@types/mime-types": "^2.1.4",
@@ -73,6 +74,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@apple/app-store-server-library": "^3.1.0",
 		"@aws-sdk/credential-providers": "^3.1017.0",
 		"@huggingface/hub": "^2.2.0",
 		"@huggingface/inference": "^4.13.21",
@@ -87,6 +89,7 @@
 		"aws4": "^1.13.2",
 		"bits-ui": "^2.14.2",
 		"date-fns": "^2.29.3",
+		"dompurify": "^3.4.15",
 		"file-type": "^21.3.1",
 		"handlebars": "^4.7.8",
 		"highlight.js": "^11.7.0",

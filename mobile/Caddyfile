@@ -1,0 +1,5 @@
+{$APP_DOMAIN} {
+    reverse_proxy app:3001 {
+        flush_interval -1
+    }
+}

@@ -1,0 +1,41 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: mobile/Dockerfile
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+      TRUSTED_PROXY_IPS: 172.30.0.2
+    volumes:
+      - chat-data:/app/mobile/data
+      - backup-data:/app/mobile/backups
+      - ./apple-certs:/app/mobile/apple-certs:ro
+    restart: unless-stopped
+    networks:
+      appnet:
+        ipv4_address: 172.30.0.3
+  https:
+    image: caddy:2
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:?Set APP_DOMAIN in .env}
+    ports: ["80:80", "443:443"]
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    restart: unless-stopped
+    networks:
+      appnet:
+        ipv4_address: 172.30.0.2
+volumes:
+  chat-data:
+  backup-data:
+  caddy-data:
+  caddy-config:
+networks:
+  appnet:
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24

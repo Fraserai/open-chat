@@ -1,0 +1,8 @@
+Open Chat mobile additions, 2026.
+Includes and imports components from Hugging Face Chat UI:
+https://github.com/huggingface/chat-ui
+Upstream commit f4ed1956d3476a388756d7c2700b0aac6c77240e.
+Chat UI is licensed under the Apache License, Version 2.0. See ../LICENSE.
+Mobile consumer UI, managed account/quota gateway, deployment configuration,
+and native Apple integration have been added to the upstream source tree.
+Open Chat is independent and is not endorsed by Hugging Face.

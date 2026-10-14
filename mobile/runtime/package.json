@@ -1,0 +1,9 @@
+{
+  "name": "open-chat-runtime",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@apple/app-store-server-library": "3.1.0",
+    "openai": "4.104.0"
+  }
+}

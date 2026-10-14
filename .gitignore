@@ -27,3 +27,30 @@ models/*
 /blob-report
 /playwright/.cache
 .probe-results/
+
+# Open Chat mobile secrets, generated app and local data
+mobile/.env
+mobile/data/
+mobile/apple-certs/
+mobile/dist/
+mobile/ios/build/
+mobile/ios/**/xcuserdata/
+mobile/backups/
+
+# --- added for GitHub backup (keeps secrets & bulky files out) ---
+node_modules/
+.next/
+.svelte-kit/
+dist/
+out/
+.turbo/
+.vercel/
+.venv/
+venv/
+__pycache__/
+*.pyc
+!.env.example
+!.env.sample
+*.log
+*.tsbuildinfo
+.claude/settings.local.json
